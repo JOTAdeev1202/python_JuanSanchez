@@ -1,0 +1,71 @@
+
+#ejercicio 4
+
+listaCompras = ''
+
+print('la abue esta escribiendo su lista de compras. ')
+listaCompras = listaCompras + '5 manzanas'
+print('-------lista compras--------')
+print(listaCompras)
+listaCompras = listaCompras + '3 lb de cilantro'
+print('-------lista compras--------')
+print(listaCompras)
+listaCompras = listaCompras + '3 lb de perejil'
+print('-------lista compras--------')
+print(listaCompras)
+
+print('se ha iniciado el carrito. En total hay: 0 manzanas.')
+
+for i in range(1,6):
+    print('se ha agregado una manzana a la canasta. Ahora hay '+ str(i) + ' manzanas')
+
+
+
+#ejercicio 3
+
+horasTrabajadas = int(input('digite las horas trabajadas en el mes: '))
+
+if horasTrabajadas < 10:
+    pago = horasTrabajadas * 5
+    print('el saldo a pagar es de : $ {pago} dolares')
+
+elif horasTrabajadas >= 10 & horasTrabajadas <= 20:
+    pago = horasTrabajadas * 10
+    print('el saldo a pagar es de : $ {pago} dolares')
+
+else:
+    pago = horasTrabajadas * 15
+    print('el saldo a pagar es de :' '$' , pago ,'dolares')
+
+
+# ejercicio tipo de numero
+numero = int(input('digite un numero: '))
+
+if numero == 0 :
+    print('es cero')
+elif numero < 0:
+    print('es negativo')
+else:
+    print('el numero es positivo')
+
+
+
+#Ejercicio Tienda
+
+cantidadProducto = int(input('digite la cantidad de productos que desea comprar: '))
+
+
+if cantidadProducto % 12 != 0:
+    cantidadDocenas = int(cantidadProducto / 12)
+print(cantidadDocenas)
+
+if cantidadDocenas > 3 :
+    
+    descuento = cantidadDocenas * 0.15
+    cantidadProducto = cantidadProducto + 1
+    print('la cantidad de docenas es: ', cantidadDocenas)
+    print('el total de productos es : ', cantidadProducto)
+else:
+    descuento = cantidadDocenas * 0.10
+
+#falta terminar
