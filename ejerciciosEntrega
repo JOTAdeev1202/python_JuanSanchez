@@ -1,0 +1,51 @@
+#ejercicio 2 clasificar numeros
+
+numero = int(input('digite un numero para saber si es positivo negativo o el numero es 0: '))
+
+if numero < 0 :
+    print('el numero es negativo')
+elif numero > 0:
+    print('el numero es positivo')
+else:
+    print('el numero 0 es neutro')
+
+# detector de año bisiesto
+
+anoDigitado = int(input('digite un año para saber si es bisiesto o no: '))
+
+if(anoDigitado % 4 == 0) and (anoDigitado % 100 != 0):
+    print('el año es bisiesto')
+else:
+    print('el año no es bisiesto')
+
+
+#verificador de palindromos
+
+palabraDigitada = (input('digite una palabra para confirmar si es palindromo o no: '))
+
+if palabraDigitada == palabraDigitada[::-1]:
+    print('la palabra ', palabraDigitada, 'es un palindromo')
+else:
+    print('la palabra ', palabraDigitada, 'no es palindromo')
+    
+# detector de numeros primos
+
+numeroDigitado = int(input('digite un numero: '))
+
+if (numeroDigitado % numeroDigitado == 0) and (numeroDigitado % 1 == 0):
+    print('el numero ', numeroDigitado, 'es un numero primo')
+else:
+    print('el numero ', numeroDigitado, 'no es un numero primo')
+    
+# califacion segun nota
+
+notaFinal = int(input('digite la nota final del estudiante: '))
+
+if notaFinal <= 30:
+    print('la calificacion del estudiante segun la nota final es: D')
+elif notaFinal <= 60:
+    print('la calificacion del estudiante segun la nota final es: C')
+elif notaFinal <= 80:
+    print('la calificacion del estudiante segun la nota final es: B')
+elif notaFinal <= 100:
+    print('la calificacion del estudiante segun la nota final es: A')
