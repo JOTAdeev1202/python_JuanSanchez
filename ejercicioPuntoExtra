@@ -1,0 +1,43 @@
+# Multiplicacion de matrices
+
+filasMatrizA = int(input("digite el número de filas para la matriz A: "))
+columnasMatrizA = int(input("digite el número de columnas para la matriz A: "))
+
+filasMatrizB = int(input("digite el número de filas para la matriz B: "))
+columnasMatrizB = int(input("digite el número de columnas para la matriz B: "))
+
+if columnasMatrizA != filasMatrizB:
+    print("Las matrices no son compatibles para la multiplicación.")
+else:
+    # Inicializar las matrices con valores ingresados por el usuario
+    matriz_a = []
+    print("digite los numeros de la matriz A ")
+    for i in range(filasMatrizA):
+        fila = [int(input(f"Valor para A[{i}][{j}]: ")) for j in range(columnasMatrizA)]
+        matriz_a.append(fila)
+
+    matriz_b = []
+    print("digite los numeros de la matriz B ")
+    for i in range(filasMatrizB):
+        fila = [int(input(f"digite el numero para la posicion B[{i}][{j}]: ")) for j in range(columnasMatrizB)]
+        matriz_b.append(fila)
+
+    # Realizar la multiplicación de matrices
+    resultado = [[0 for _ in range(columnasMatrizB)] for _ in range(filasMatrizA)]
+    for i in range(filasMatrizA):
+        for j in range(columnasMatrizB):
+            for k in range(columnasMatrizA):
+                resultado[i][j] += matriz_a[i][k] * matriz_b[k][j]
+
+    # Mostrar el resultado
+    print("\nLa matriz A es:")
+    for fila in matriz_a:
+        print(fila)
+
+    print("\nLa Matriz B es:")
+    for fila in matriz_b:
+        print(fila)
+
+    print("\nEl resultado de la multiplicación entre las matricez es:")
+    for fila in resultado:
+        print(fila)
