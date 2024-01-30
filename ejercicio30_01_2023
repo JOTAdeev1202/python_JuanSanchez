@@ -1,0 +1,77 @@
+'''
+def saludar(nombre, lenguaje):
+    print('hola', nombre,'bienvenido a, ', lenguaje)
+    
+saludar('juan','python')
+
+# saludar(nombre = 'juan', lenguaje = 'python')
+
+def compras(*productos):
+    print(productos)
+ 
+compras("Camisa", "Televisor", "Arroz",'brujeria','querubin',122363,12.34565432) #Esto imprime: ('Camisa', 'Televisor', 'Arroz')
+def persona(**datos):
+    print(datos)
+ 
+persona(Nombre = "Pepe Perez", Email = "pepe@email.com", celular = 3123445332, medidas = 3435.50) #Esto imprime: {'Nombre': 'Pepe Perez', 'Email': 'pepe@email.com'}
+
+def calcularPrecio(precio,cantidad):
+    total = precio * cantidad
+    return total;
+
+print('bienvenido a su sistema de cobro')
+
+pepsi = 3000
+chocorramo = 1500
+empanada = 3500
+
+print(f'')
+cantidad = int(input('digite la cantidad de productos'))
+precio = int(input('digite el precio del producto'))
+print('el valor a pagar es: ', calcularPrecio(precio,cantidad),'pesos')
+
+
+def imprimir(nombre,cantidad,precio):
+    print('hola',nombre,'ingrese la cantidad de productos',cantidad,'y el precio del producto es ', precio)
+
+imprimir('juan',6,2500)
+'''
+
+'''
+def calculoVectorial(nombre,cantidad,precio)
+    print('hola',nombre,'ingrese la cantidad de productos',cantidad,'y el precio del producto es ', precio)
+
+nombre = input('digite su nombre: ')
+cantidad = int(input('digite la cantidad de productos'))
+precio = float(input('digite el precio del productos'))
+calculoVectorial(nombre,cantidad,precio)
+'''
+
+def saludoNombre (nombre)
+    print('holaa como fue ', nombre)
+
+
+#ejercicio tienda
+
+#funcion para calcular el precio con el descuento
+def calculoPrecio(precio_Original,porcentaje_Descuento):
+    descuento = precio_Original - precio_Original * porcentaje_Descuento
+    return descuento
+
+def calculoImpuesto(precio_Descuento,porcentaje_Impuesto):
+    IVA = precio_Descuento * porcentaje_Impuesto
+    return precio_Descuento + IVA
+
+def total():
+    precio_Original = float(input('precio producto'))
+    descuento = float(input('descuento producto'))
+    impuesto = float(input('impuesto producto'))
+    
+    precio_con_descuento = calculoPrecio(precio_Original,descuento)
+    precioImpuestoDescuento = calculoImpuesto(precio_Descuento,impuesto)
+    
+    print('bienvenido su precio final es: ', precio_Original)
+    print('el precio con descuento es: ', precio_Descuento)
+    print('el precio final con el descuento y el impuesto es: ', precioImpuestoDescuento)
+    
+total()
